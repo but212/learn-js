@@ -59,3 +59,41 @@ console.log("false")
 
 undefined
 console.log(undefined)
+
+
+// ----------------
+// null
+// ----------------
+
+null
+console.log(null)
+
+// ----------------
+// Symbol
+// ----------------
+
+Symbol()
+console.log(Symbol())
+console.log(Symbol("foo"))
+console.log(Symbol("bar"))
+
+// ----------------
+// BigInt
+// ----------------
+
+/**
+ * 주어진 숫자의 팩토리얼을 계산합니다.
+ * @param {bigint} n - 팩토리얼을 계산할 숫자
+ * @returns {bigint} n의 팩토리얼 값
+ */
+function factorial(n) {
+  function factorialTail(n, acc = 1n) {
+    if (n === 0n) return acc;
+    return factorialTail(n - 1n, n * acc);
+  }
+  
+  return factorialTail(n);
+}
+
+const result = factorial(20n);
+console.log(result);
