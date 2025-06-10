@@ -88,7 +88,7 @@ console.log(Symbol("bar"))
  */
 function factorial(n) {
   function factorialTail(n, acc = 1n) {
-    if (n === 0n) return acc;
+    if (n <= 0n) return acc; // 종료조건: 
     return factorialTail(n - 1n, n * acc);
   }
   
@@ -97,3 +97,4 @@ function factorial(n) {
 
 const result = factorial(20n);
 console.log(result);
+
