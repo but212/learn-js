@@ -26,9 +26,20 @@ drawWater();
  * @returns
  * year, month, day를 조합해서 다이어리 시작에 쓰일 문자열을 반환
  */
-function write_diary_init(year, month, day) {
+function write_diary_init(year, month, day, where) {
   let foot_add = "일에 쓰인 일기입니다.";
-  return year + "년 " + month + "월 " + day + foot_add;
+  return (
+    year +
+    "년 " +
+    month +
+    "월 " +
+    day +
+    foot_add +
+    " " +
+    where +
+    "에 있었습니다."
+  );
 }
 
-console.log(write_diary_init(2025, 6, 10));
+console.log(write_diary_init(2025, 6, 10, "롯데타워"));
+console.log(write_diary_init(2025, 6, 11, "수원화성"));
