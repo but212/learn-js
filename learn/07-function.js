@@ -63,9 +63,9 @@ function sumNumber(Num1, Num2) {
  * @param {Number} Num2 두 번째 숫자
  */
 function printSumNumber(Num1, Num2) {
-  console.log("첫 번째 수: " + Num1);
-  console.log("두 번째 수: " + Num2);
-  console.log("두 수 의 합: " + sumNumber(Num1, Num2));
+  console.log("첫 번째 수:", Num1);
+  console.log("두 번째 수:", Num2);
+  console.log("두 수 의 합:", sumNumber(Num1, Num2));
 }
 
 printSumNumber(19, 19);
@@ -89,8 +89,14 @@ function subNumber(Num1, Num2) {
 }
 
 let SubNum = subNumber(30, 3);
-console.log("빼기 결괏값: ", SubNum);
+console.log("빼기 결괏값:", SubNum);
 
+/**
+ * 인자로 받은 Num1과 Num2를 곱하는 함수
+ * @param {Number} Num1 첫 번째 숫자
+ * @param {Number} Num2 두 번째 숫자
+ * @returns {Number} 인자 두 수를 곱한 수
+ */
 function multiplyNum(Num1, Num2) {
   return Num1 * Num2;
 }
