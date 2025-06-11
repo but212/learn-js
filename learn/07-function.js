@@ -23,7 +23,8 @@ drawWater();
  * @param {Number} year
  * @param {Number} month
  * @param {Number} day
- * @returns
+ * @param {String} where
+ * @returns {String}
  * year, month, day를 조합해서 다이어리 시작에 쓰일 문자열을 반환
  */
 function write_diary_init(year, month, day, where) {
@@ -43,3 +44,53 @@ function write_diary_init(year, month, day, where) {
 
 console.log(write_diary_init(2025, 6, 10, "롯데타워"));
 console.log(write_diary_init(2025, 6, 11, "수원화성"));
+
+// 예약어는 함수이름이 될 수 있음: return, let 등
+
+/**
+ * 인자에 쓰인 두 숫자를 합쳐주는 함수
+ * @param {Number} Num1 첫 번쨰 숫자
+ * @param {Number} Num2 두 번째 숫자
+ * @returns {Number} 두 숫자의 합
+ */
+function sumNumber(Num1, Num2) {
+  return Num1 + Num2;
+}
+
+/**
+ * sumNumber를 콘솔 출력하는 함수
+ * @param {Number} Num1 첫 번째 숫자
+ * @param {Number} Num2 두 번째 숫자
+ */
+function printSumNumber(Num1, Num2) {
+  console.log("첫 번째 수: " + Num1);
+  console.log("두 번째 수: " + Num2);
+  console.log("두 수 의 합: " + sumNumber(Num1, Num2));
+}
+
+printSumNumber(19, 19);
+
+// 함수는 실행될 수 있다.
+// 함수는 실행되면 결괏값을 반환한다.
+// 계산된 값을 반환할 때 return 키워드를 사용한다.
+
+/**
+ * 인자로 전달된 Num1에서 Num2를 뺴는 함수
+ * @param {Number} Num1 첫 번째 숫자
+ * @param {Number} Num2 두 번째 숫자
+ * @returns Num1에서 Num2를 뺸 숫자
+ */
+function subNumber(Num1, Num2) {
+  // 지역변수로 계산값 할당
+  let ret = Num1 - Num2;
+
+  // 결괏값 반환
+  return ret;
+}
+
+let SubNum = subNumber(30, 3);
+console.log("빼기 결괏값: ", SubNum);
+
+function multiplyNum(Num1, Num2) {
+  return Num1 * Num2;
+}
