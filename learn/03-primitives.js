@@ -12,11 +12,11 @@
 // String
 // ----------------
 
-'작은 따옴표로 묶인 문자값'
-"큰 따옴표로 묶인 텍스트 데이터"
+"작은 따옴표로 묶인 문자값";
+"큰 따옴표로 묶인 텍스트 데이터";
 
 console.log("나의 100m 달리기 최고 기록은 12'26\"이야.");
-console.log('나의 100m 달리기 최고 기록은 12\'26"이야.');
+console.log("나의 100m 달리기 최고 기록은 12'26\"이야.");
 console.log("나의 100m 달리기" + " " + "최고 기록은 12'26\"이야.");
 
 // ----------------
@@ -43,39 +43,37 @@ console.log(Number.MIN_SAFE_INTEGER);
 // Boolean
 // ----------------
 
-true
-"true"
-false
-"false"
-console.log(true)
-console.log("true")
-console.log(false)
-console.log("false")
-
+true;
+("true");
+false;
+("false");
+console.log(true);
+console.log("true");
+console.log(false);
+console.log("false");
 
 // ----------------
 // undefined
 // ----------------
 
-undefined
-console.log(undefined)
-
+undefined;
+console.log(undefined);
 
 // ----------------
 // null
 // ----------------
 
-null
-console.log(null)
+null;
+console.log(null);
 
 // ----------------
 // Symbol
 // ----------------
 
-Symbol()
-console.log(Symbol())
-console.log(Symbol("foo"))
-console.log(Symbol("bar"))
+Symbol();
+console.log(Symbol());
+console.log(Symbol("foo"));
+console.log(Symbol("bar"));
 
 // ----------------
 // BigInt
@@ -87,14 +85,11 @@ console.log(Symbol("bar"))
  * @returns {bigint} n의 팩토리얼 값
  */
 function factorial(n) {
-  function factorialTail(n, acc = 1n) {
-    if (n <= 0n) return acc; // 종료조건: 
-    return factorialTail(n - 1n, n * acc);
-  }
-  
+  const factorialTail = (n, acc = 1n) =>
+    n <= 0n ? acc : factorialTail(n - 1n, n * acc);
+
   return factorialTail(n);
 }
 
 const result = factorial(20n);
 console.log(result);
-
