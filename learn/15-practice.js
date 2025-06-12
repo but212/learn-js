@@ -38,9 +38,9 @@ const id = {
 id.value = 30;
 let result1 = id.fmap((x) => x * 2);
 let result2 = id
-  .fmap((x) => x * 2)
+  .fmap((x) => x * 3)
   .fmap((x) => x + 5)
-  .fmap((x) => x % 2 === 1);
+  .fmap(empty_obj.is_ord);
 
 console.log(id);
 console.log(id.value);
