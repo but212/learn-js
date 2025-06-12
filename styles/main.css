@@ -1,4 +1,6 @@
+@import url(./modules/theme.css);
+
 body {
-    background-color: #111;
-    color: #fff;
+  background-color: var(--custom-black);
+  color: var(--custom-white);
 }
