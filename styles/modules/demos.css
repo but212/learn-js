@@ -1,0 +1,5 @@
+body {
+  background-color: var(--custom-yellow);
+  font-weight: 300;
+  margin: 48px;
+}

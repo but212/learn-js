@@ -1,6 +1,2 @@
 @import url(./modules/theme.css);
-
-body {
-  background-color: var(--custom-black);
-  color: var(--custom-white);
-}
+@import url(./modules/demos.css);
