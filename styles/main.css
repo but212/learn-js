@@ -1,2 +1,4 @@
-@import url(./modules/theme.css);
-@import url(./modules/demos.css);
+@layer theme, demo;
+
+@import "./modules/_theme.css" layer(theme);
+@import "./modules/_demo.css" layer(demo);
