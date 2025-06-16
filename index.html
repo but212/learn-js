@@ -2,48 +2,83 @@
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
+    <title>JavaScript 펀더멘탈</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn JS</title>
-    <!-- MIME 타입 -->
-    <!-- CSS MIME 타입 (기본값: text/css) 생략 가능 -->
-    <link rel="stylesheet" href="/styles/main.css" />
-    <!-- JS MIME 타입 (기본값: text/javascript) 생략 가능 -->
-    <!-- <script>
-      console.log(2025);
-    </script> -->
-    <!-- <script src="/learn/01-hello.js"></script> -->
-    <!-- JS 모듈로 호출: 이 파일은 모듈파일이다라고 브라우저에 선언 -->
-    <!-- <script type="module" src="/learn/02-module.js"></script> -->
-    <!-- <script type="module" src="/learn/03-primitives.js"></script> -->
-    <!-- <script type="module" src="/learn/04-practice.js"></script> -->
-    <!-- <script type="module" src="/learn/05-variables.js"></script> -->
-    <!-- <script type="module" src="/learn/06-practice.js"></script> -->
-    <!-- <script type="module" src="/learn/07-function.js"></script> -->
-    <!-- <script type="module" src="/learn/08-scope-hoist.js"></script> -->
-    <!-- <script type="module" src="/learn/09-practice.js"></script> -->
-    <!-- <script type="module" src="/learn/10-arrow-function.js"></script> -->
-    <!-- <script type="module" src="/learn/11-object.js"></script> -->
-    <!-- <script type="module" src="/learn/12-practice.js"></script> -->
-    <!-- <script type="module" src="/learn/13-scope.js"></script> -->
-    <!-- <script type="module" src="/learn/14-object.js"></script> -->
-    <!-- <script type="module" src="/learn/15-practice.js"></script> -->
-    <!-- <script type="module" src="/learn/16-if-else.js"></script> -->
-    <!-- <script type="module" src="/learn/17-practice.js"></script> -->
-    <!-- <script type="module" src="/learn/18-reference.js"></script> -->
-    <!-- <script type="module" src="/learn/19-typeof-operator.js"></script> -->
-    <!-- <script type="module" src="/learn/20-parameter-default-value.js"></script> -->
-    <!-- <script type="module" src="/learn/21-type-conv-parseint.js"></script> -->
-    <!-- <script type="module" src="/learn/22-color-formatting.js"></script> -->
-    <!-- <script type="module" src="/learn/23-undefined-vs-null.js"></script> -->
-    <!-- <script type="module" src="/learn/24-bom-dom.js"></script> -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="icon" href="./assets/images/ecmascript-logo.png" />
   </head>
+
   <body>
     <h1>JavaScript</h1>
+
     <ul id="exorcist-characters">
       <li class="character yo-han" data-type="hero">박요한</li>
       <li class="character master-choi" data-type="master">최강림</li>
       <li class="character villain-ghost" data-type="villain">악령</li>
     </ul>
-    <script src="/learn/26-change-class-property.js"></script>
+
+    <div id="demo">
+      <p class="add">단락에 "text-primary" 클래스 이름을 추가해 주세요!</p>
+      <script>
+        const element = document.getElementById("demo").querySelector(".add");
+
+        element.classList.add("text-primary");
+        console.log(element.classList.value);
+        console.log(element.classList.length);
+      </script>
+
+      <p class="remove">단락에서 "remove" 클래스 이름을 제거해 주세요!</p>
+      <script>
+        {
+          const demo = document.getElementById("demo");
+          const element = demo.querySelector(".remove");
+          console.log(element.classList.length); // 1
+          element.classList.remove("remove");
+          console.log(element.classList.length); // 0
+        }
+      </script>
+
+      <p class="contains1">
+        단락은 "text-primary" 클래스 이름을 가지고 있나요?
+      </p>
+      <script>
+        {
+          const result = document
+            .querySelector("#demo .contains1")
+            .classList.contains("text-primary");
+
+          console.log(".contains1에 text-primary를 가지고 있는가?: ", result);
+        }
+      </script>
+
+      <p class="contains2 text-primary">
+        단락은 "text-primary" 클래스 이름을 가지고 있나요?
+      </p>
+      <script>
+        {
+          const result = document
+            .querySelector("#demo .contains2")
+            .classList.contains("text-primary");
+
+          console.log(".contains2에 text-primary를 가지고 있는가?: ", result);
+        }
+      </script>
+
+      <p class="toggle">
+        단락은 "text-primary" 이름을 가지고 있나요? 있다면 삭제하고, 없다면
+        추가해 주세요.
+      </p>
+      <script>
+        {
+          const toggleElement = document.querySelector("#demo .toggle");
+          console.log(toggleElement.classList.value);
+
+          toggleElement.classList.toggle("text-primary");
+          console.log(toggleElement.classList.value);
+        }
+      </script>
+    </div>
+
+    <script src="./learn/26-change-class-property.js"></script>
   </body>
 </html>
