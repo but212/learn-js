@@ -4,81 +4,17 @@
     <meta charset="UTF-8" />
     <title>JavaScript 펀더멘탈</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <link rel="icon" href="./assets/images/ecmascript-logo.png" />
   </head>
 
   <body>
     <h1>JavaScript</h1>
-
-    <ul id="exorcist-characters">
-      <li class="character yo-han" data-type="hero">박요한</li>
-      <li class="character master-choi" data-type="master">최강림</li>
-      <li class="character villain-ghost" data-type="villain">악령</li>
-    </ul>
-
-    <div id="demo">
-      <p class="add">단락에 "text-primary" 클래스 이름을 추가해 주세요!</p>
-      <script>
-        const element = document.getElementById("demo").querySelector(".add");
-
-        element.classList.add("text-primary");
-        console.log(element.classList.value);
-        console.log(element.classList.length);
-      </script>
-
-      <p class="remove">단락에서 "remove" 클래스 이름을 제거해 주세요!</p>
-      <script>
-        {
-          const demo = document.getElementById("demo");
-          const element = demo.querySelector(".remove");
-          console.log(element.classList.length); // 1
-          element.classList.remove("remove");
-          console.log(element.classList.length); // 0
-        }
-      </script>
-
-      <p class="contains1">
-        단락은 "text-primary" 클래스 이름을 가지고 있나요?
-      </p>
-      <script>
-        {
-          const result = document
-            .querySelector("#demo .contains1")
-            .classList.contains("text-primary");
-
-          console.log(".contains1에 text-primary를 가지고 있는가?: ", result);
-        }
-      </script>
-
-      <p class="contains2 text-primary">
-        단락은 "text-primary" 클래스 이름을 가지고 있나요?
-      </p>
-      <script>
-        {
-          const result = document
-            .querySelector("#demo .contains2")
-            .classList.contains("text-primary");
-
-          console.log(".contains2에 text-primary를 가지고 있는가?: ", result);
-        }
-      </script>
-
-      <p class="toggle">
-        단락은 "text-primary" 이름을 가지고 있나요? 있다면 삭제하고, 없다면
-        추가해 주세요.
-      </p>
-      <script>
-        {
-          const toggleElement = document.querySelector("#demo .toggle");
-          console.log(toggleElement.classList.value);
-
-          toggleElement.classList.toggle("text-primary");
-          console.log(toggleElement.classList.value);
-        }
-      </script>
-    </div>
-
-    <script src="./learn/26-change-class-property.js"></script>
+    <button type="button" class="clickable clickable-1">클릭 가능한 요소</button>
+    <button type="button" class="clickable clickable-2">클릭 가능한 요소</button>
+    <button type="button" class="clickable clickable-3">클릭 가능한 요소</button>
+    <button type="button" class="clickable clickable-4">클릭 가능한 요소</button>
+    <button type="button" class="clickable clickable-5">클릭 가능한 요소</button>
+    <script type="module" src="./learn/29-custom-callback.js"></script>
   </body>
 </html>
