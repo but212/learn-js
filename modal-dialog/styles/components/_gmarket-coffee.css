@@ -1,0 +1,54 @@
+.dialog-non-modal {
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 360px;
+  height: 400px;
+  left: 20%;
+  border-radius: 16px;
+  background: #070611;
+  padding-bottom: 16px;
+  .link {
+    display: flex;
+    width: 90%;
+    height: 44px;
+    padding: 11px 88px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #8ec3fa;
+    font-size: 16px;
+    font-family: "Pretendard KR", sans-serif;
+    overflow: hidden;
+    line-height: 135.5%;
+    color: #070611;
+    box-sizing: border-box;
+    text-decoration: none;
+    justify-self: center;
+  }
+  .ad {
+    margin-top: 60px;
+    width: 360px;
+    height: 278px;
+  }
+  .close-button {
+    position: absolute;
+    cursor: pointer;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+    border: none;
+    background: none;
+  }
+}
+
+.is-open.dialog-non-modal {
+  z-index: 9999;
+  opacity: 1;
+}
