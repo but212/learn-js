@@ -23,14 +23,14 @@
 // ------------------------------------------------------
 
 // 함수 선언 (Function Declaration) 구문
-function drawWater() {
-  console.groupCollapsed('drawWater() 호출됨')
-  console.log('1. 빈 양동이 가져오기')
-  console.log('2. 양동이 들고 우물로 이동하기')
-  console.log('3. 우물에서 물 길어오기')
-  console.log('4. 집으로 귀가하기')
-  console.groupEnd()
-}
+// function drawWater() {
+//   console.groupCollapsed('drawWater() 호출됨')
+//   console.log('1. 빈 양동이 가져오기')
+//   console.log('2. 양동이 들고 우물로 이동하기')
+//   console.log('3. 우물에서 물 길어오기')
+//   console.log('4. 집으로 귀가하기')
+//   console.groupEnd()
+// }
 
 // ------------------------------------------------------
 
@@ -63,26 +63,26 @@ function drawWater() {
 // let year = 4027
 
 // 함수 선언
-function writeDiary(
-  year /*기본값 undefined */,
-  month /*기본값 undefined */,
-  day /*기본값 undefined */,
-  location /*기본값 undefined */
-) {
-  // 지역 변수 (함수 안에서만 사용 가능, local scope variable)
-  let mood = '행복감!'
+// function writeDiary(
+//   year /*기본값 undefined */,
+//   month /*기본값 undefined */,
+//   day /*기본값 undefined */,
+//   location /*기본값 undefined */
+// ) {
+//   // 지역 변수 (함수 안에서만 사용 가능, local scope variable)
+//   // let mood = '행복감!'
 
-  console.log(
-    year +
-      '년 ' +
-      month +
-      '월 ' +
-      day +
-      '일에 ' +
-      location +
-      '에 다녀온 일기를 쓴다.'
-  )
-}
+//   console.log(
+//     year +
+//       '년 ' +
+//       month +
+//       '월 ' +
+//       day +
+//       '일에 ' +
+//       location +
+//       '에 다녀온 일기를 쓴다.'
+//   )
+// }
 
 // 함수 호출(실행)
 // 일기쓰기(연도, 월, 일, 장소)
@@ -102,20 +102,20 @@ function writeDiary(
 // 함수의 반환문(return)
 // --------------------------------------------------------------------------
 
-function 더하기(숫자1, 숫자2) {
-  // 브라우저 콘솔 패널에 숫자1 + 숫자2 계산된 값이 기록된다.
-  // console.log('콘솔 패널에 출력된 계산 결과 =', 숫자1 + 숫자2)
-  // 함수에서 처리(계산)된 값을 반환하려면 return 키워드가 필요하다.
-  return 숫자1 + 숫자2
-}
+// function 더하기(숫자1, 숫자2) {
+//   // 브라우저 콘솔 패널에 숫자1 + 숫자2 계산된 값이 기록된다.
+//   // console.log('콘솔 패널에 출력된 계산 결과 =', 숫자1 + 숫자2)
+//   // 함수에서 처리(계산)된 값을 반환하려면 return 키워드가 필요하다.
+//   return 숫자1 + 숫자2
+// }
 
 // 함수(기능)가 실행되어 값을 반환한다면 그 값을 변수에 기억하려 한다.
-let 결과값 = 더하기(10, 9) // 19
+// let 결과값 = 더하기(10, 9) // 19
 // console.log('결과값 =', 결과값)
 
 // let 결과값2 = 더하기(결과값, 결과값)
 
-let 결과값2 = 더하기(더하기(10 + 7, 9 - 2), 더하기(-11 + 3, 7 - 1))
+// let 결과값2 = 더하기(더하기(10 + 7, 9 - 2), 더하기(-11 + 3, 7 - 1))
 
 // console.log(결과값2) // ???
 
@@ -123,16 +123,16 @@ let 결과값2 = 더하기(더하기(10 + 7, 9 - 2), 더하기(-11 + 3, 7 - 1))
 // 함수는 실행되면 결과 값을 반환한다.
 // 처리(계산)된 값을 반환할 때 return 키워드를 사용한다.
 
-function 빼기(숫자1, 숫자2) {
+// function 빼기(숫자1, 숫자2) {
   // 숫자1 = 10
   // 숫자2 = 4
   // 처리(계산)
   // 지역 변수 선언 계산된 값 할당
-  let 결과값 = 숫자1 - 숫자2 // 10 - 4 = 6
+//   let 결과값 = 숫자1 - 숫자2 // 10 - 4 = 6
 
-  // 계산된 결과값을 반환
-  return 결과값
-}
+//   // 계산된 결과값을 반환
+//   return 결과값
+// }
 
 // console.log(빼기(10, 4))
 // console.log(빼기(24, 6))
@@ -145,23 +145,23 @@ function 빼기(숫자1, 숫자2) {
 // console.log() vs. 함수의 return
 // -----------------------------------------------------
 
-function 곱하기(숫자1, 숫자2) {
-  let 결과값 = 숫자1 * 숫자2 // 계산된 값
-  // console.log(결과값)
+// function 곱하기(숫자1, 숫자2) {
+//   // let 결과값 = 숫자1 * 숫자2 // 계산된 값
+//   // console.log(결과값)
 
-  // 명시적 결과 반환
-  // return 결과값
+//   // 명시적 결과 반환
+//   // return 결과값
 
-  // 암묵적 결과 반환
-  // return undefined
-}
+//   // 암묵적 결과 반환
+//   // return undefined
+// }
 
-function 화면에결과그리기() {
-  const 화면에그릴숫자값 = 곱하기(10, 20) // undefined
-  document.write(화면에그릴숫자값) // undefined -> 'undefined'
-}
+// function 화면에결과그리기() {
+//   const 화면에그릴숫자값 = 곱하기(10, 20) // undefined
+//   document.write(화면에그릴숫자값) // undefined -> 'undefined'
+// }
 
-화면에결과그리기()
+// 화면에결과그리기()
 
 // 전역변수를 선언만하고
 // 함수 내부에서 정의할 경우에는
@@ -170,14 +170,14 @@ function 화면에결과그리기() {
 // 이때에도 return이 없으면
 // 함수는 undefined를 반환하나요?
 
-let y = '전역 변수'
+// let y = '전역 변수'
 
-function 함수() {
-  // 전역 변수 변경
-  y = 0
+// function 함수() {
+//   // 전역 변수 변경
+//   y = 0
 
-  // 아무런 값을 명시적으로 반환하지 않아요
-  // return undefined
-}
+//   // 아무런 값을 명시적으로 반환하지 않아요
+//   // return undefined
+// }
 
-console.log(함수()) // undefined
+// console.log(함수()) // undefined

@@ -46,10 +46,10 @@ console.log(body.margin);
 // heading1['font-size'] = "1rem";
 
 // 이걸 쉽게 하는 것이 객체리터럴
-const heading1 = {
-  "font-weight": 200,
-  "font-size": "1rem",
-};
+// const heading1 = {
+//   "font-weight": 200,
+//   "font-size": "1rem",
+// };
 
 // 함수는 객체이며 값으로 취급된다.
 function sayHello() {

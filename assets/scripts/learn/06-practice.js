@@ -76,7 +76,7 @@ let homeAddress = '서울특별시 성북구 미아동 ...'
 console.log('homeAddress =', homeAddress)
 
 // 현재 시간
-let currentTime = '오후 2:37'
+// let currentTime = '오후 2:37'
 console.log('currentTime =', currentTime)
 
 // 로그인 상태

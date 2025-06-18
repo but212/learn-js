@@ -12,14 +12,14 @@ function showMeTheMoney() {
 showMeTheMoney();
 
 // 2. 함수 표현식
-let powerOverwhelming = function (_) {
+let powerOverwhelming = function () {
   console.log("I'm Immortal");
 };
 
 powerOverwhelming();
 
 // 3. 화살표 함수 표현식
-let blackSheepWall = (_) => {
+let blackSheepWall = () => {
   console.log("skip the fog");
 };
 
@@ -36,7 +36,7 @@ readABook("채식주의자", 20);
 //     return "https://" + Url
 // }
 
-const ROOT_FONT_SIZE = 16;
+// const ROOT_FONT_SIZE = 16;
 
 // function px2rem(pxvalue) {
 //   return pxvalue / ROOT_FONT_SIZE + "rem";
@@ -47,4 +47,4 @@ const ROOT_FONT_SIZE = 16;
 // };
 
 // 화살표 함수 표현식은 return 없이 함수를 반환할 수 있다.
-let px2rem = (pxvalue) => pxvalue / ROOT_FONT_SIZE + "rem";
+// let px2rem = (pxvalue) => pxvalue / ROOT_FONT_SIZE + "rem";

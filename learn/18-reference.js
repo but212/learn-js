@@ -2,10 +2,10 @@
 // 객체의 대입은 참조다.
 // 이 예제에서 obj1과 obj2는 같은 공간의 참조한 것
 
-let obj1 = {};
-let obj2 = obj1;
-obj2.food = "햄버거";
-console.log(obj1);
+// let obj1 = {};
+// let obj2 = obj1;
+// obj2.food = "햄버거";
+// console.log(obj1);
 
 // 객체 비교는 참조의 비교다.
 const user1 = { 이름: "석정일" };
@@ -19,10 +19,10 @@ console.log(user2 === user3); // true
 // 📌 객체 비교
 // --------------------------------------------------------------------------
 
-const obj_1 = { a: 1, b: { c: 2 } };
-const obj_2 = { a: 1, b: { c: 2 } };
-const obj_3 = obj1;
+// const obj_1 = { a: 1, b: { c: 2 } };
+// const obj_2 = { a: 1, b: { c: 2 } };
+// const obj_3 = obj1;
 
-console.log(obj1 === obj2);
-console.log(obj2 === obj3);
-console.log(obj3 === obj1);
+// console.log(obj1 === obj2);
+// console.log(obj2 === obj3);
+// console.log(obj3 === obj1);

@@ -17,16 +17,16 @@
 // const items = document.getElementsByClassName('item')
 // console.log(items)
 
-const elementById = document.querySelector('#useremail')
+// const elementById = document.querySelector('#useremail')
 // console.log(elementById)
 
-const elementByName = document.querySelector('[name="email"]')
+// const elementByName = document.querySelector('[name="email"]')
 // console.log(elementByName)
 
-const firstElementByClassName = document.querySelector('.item')
+// const firstElementByClassName = document.querySelector('.item')
 // console.log(firstElementByClassName)
 
-const elementByTagName = document.querySelector('h1')
+// const elementByTagName = document.querySelector('h1')
 // console.log(elementByTagName)
 
 // Document {}

@@ -27,16 +27,16 @@
 // 커피.용량 = '600ml'
 
 // 객체 리터럴을 사용해 객체 정의 (쉬운 방법)
-const 커피 = {
-  용량: '600ml',
-  브랜드: '스타벅스',
-  이름: '아메리카노',
-}
+// const 커피 = {
+//   용량: '600ml',
+//   브랜드: '스타벅스',
+//   이름: '아메리카노',
+// }
 
-const 국어사전 = {
-  결제: '대금을 주고받아 매매 당사자 사이의 거래 관계를 끝맺는 일',
-  결재: '결정할 권한이 있는 상관이 부하가 제출한 안건을 검토하여 허가하거나 승인',
-}
+// const 국어사전 = {
+//   결제: '대금을 주고받아 매매 당사자 사이의 거래 관계를 끝맺는 일',
+//   결재: '결정할 권한이 있는 상관이 부하가 제출한 안건을 검토하여 허가하거나 승인',
+// }
 
 // console.log(국어사전)
 
@@ -50,21 +50,21 @@ const macbookPro = {
 
 // console.log(macbookPro)
 
-const macbookPro14 = {
-  chip: 'Apple M4 Pro',
-  memory: 24,
-  disk: 'Macintosh HD',
-  serialNumber: 'G7T6602PVL',
-  os: 'macOS Sequoia 15.5',
-}
+// const macbookPro14 = {
+//   chip: 'Apple M4 Pro',
+//   memory: 24,
+//   disk: 'Macintosh HD',
+//   serialNumber: 'G7T6602PVL',
+//   os: 'macOS Sequoia 15.5',
+// }
 
 // console.log(macbookPro14)
 
-let chip = 'Apple M4 Pro'
-let memory = 24
-let disk = 'Macintosh HD'
-let serialNumber = 'G7T6602PVL'
-let os = 'macOS Sequoia 15.5'
+// let chip = 'Apple M4 Pro'
+// let memory = 24
+// let disk = 'Macintosh HD'
+// let serialNumber = 'G7T6602PVL'
+// let os = 'macOS Sequoia 15.5'
 
 // console.log('chip =', chip)
 // console.log('memory =', memory)
@@ -72,18 +72,18 @@ let os = 'macOS Sequoia 15.5'
 // console.log('serialNumber =', serialNumber)
 // console.log('os =', os)
 
-const 객체 = {
-  숫자: 101,
-  문자: '안녕!',
-  불리언: false,
-  널: null,
-  언디파인드: undefined,
-  심볼: Symbol('객체'),
-  빅인트: 910n,
-  배열: [],
-  객체: {},
-  함수: () => {},
-}
+// const 객체 = {
+//   숫자: 101,
+//   문자: '안녕!',
+//   불리언: false,
+//   널: null,
+//   언디파인드: undefined,
+//   심볼: Symbol('객체'),
+//   빅인트: 910n,
+//   배열: [],
+//   객체: {},
+//   함수: () => {},
+// }
 
 const h1Camel = {
   fontWeight: 200,

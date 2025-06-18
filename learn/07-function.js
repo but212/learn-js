@@ -91,12 +91,12 @@ function subNumber(Num1, Num2) {
 let SubNum = subNumber(30, 3);
 console.log("빼기 결괏값:", SubNum);
 
-/**
- * 인자로 받은 Num1과 Num2를 곱하는 함수
- * @param {Number} Num1 첫 번째 숫자
- * @param {Number} Num2 두 번째 숫자
- * @returns {Number} 인자 두 수를 곱한 수
- */
-function multiplyNum(Num1, Num2) {
-  return Num1 * Num2;
-}
+// /**
+//  * 인자로 받은 Num1과 Num2를 곱하는 함수
+//  * @param {Number} Num1 첫 번째 숫자
+//  * @param {Number} Num2 두 번째 숫자
+//  * @returns {Number} 인자 두 수를 곱한 수
+//  */
+// function multiplyNum(Num1, Num2) {
+//   return Num1 * Num2;
+// }

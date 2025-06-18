@@ -14,15 +14,8 @@
 // - undefined
 // - NaN (숫자 + undefined)
 
-let isLightColorRed = false
+// let isLightColorRed = false
 
-// 표현식 10 - 11 = -1
-
-if (10 - 11) {
-  console.log('신호등 앞에서 멈춰야 합니다.')
-} else {
-  console.log('좌우를 살피고 건널목을 건넙니다.')
-}
 
 // 불리언 타입 변경
 console.log(Boolean(-1))
@@ -46,28 +39,6 @@ console.log(Boolean(() => {}))
 console.log(Boolean({}))
 console.log(Boolean([]))
 
-
-if (-100) {
-  console.log('this is truethy')
-} else {
-
-}
-
-x = 10
-y = 5
-
-// JavaScript는 상황에 따라 타입을 자동 변환
-
-if(x == y)  { console.log('this is truthy') }
-if(x === y) { console.log('this is truthy') }
-if(x != y)  { console.log('this is truthy') }
-if(x !== y) { console.log('this is truthy') }
-if(x < y) { console.log('this is truthy') }
-if(x <= y) { console.log('this is truthy') }
-if(x > y) { console.log('this is truthy') }
-if(x >= y) { console.log('this is truthy') }
-
-
 // 개발자 작성
 console.log(Boolean(24 == '24'))
 // JavaScript 엔진 처리 (타입 자동 변환, 느슨한 비교)
@@ -80,11 +51,11 @@ console.log(Boolean(24 === '24'))
 
 
 
-let condition = true
+// let condition = true
 
 // 조건 (참이다, 아니다 : 흑백논리)
-if (condition) {}
-else {}
+// if (condition) {}
+// else {}
 
 let 신호등불빛색 = '보라색'
 

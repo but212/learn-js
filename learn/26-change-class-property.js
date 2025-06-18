@@ -1,7 +1,5 @@
 const exorcistCharacters = document.getElementById("exorcist-characters");
 
-const yoHan = exorcistCharacters.querySelector(".character.yo-han");
-
 const masterChoi = exorcistCharacters.querySelector(".character.master-choi");
 
 // 채신기술(영하고 MZ함)

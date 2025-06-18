@@ -29,8 +29,6 @@
 // // 도큐먼트 객체
 // console.log(document);
 
-const history = "history";
-
 // --------------------------------------------------------------------------
 // 📌 DOM(문서 객체 모델)
 // - 문서 요소 선택(접근)하는 함수들 (Web APIs)
@@ -60,12 +58,6 @@ const history = "history";
 // Document.getElementsByClassName(className)
 // const items = document.getElementsByClassName("item");
 // console.log(items);
-
-// Document.querySelector(selector)
-const items = document.querySelector(".item");
-
-// 모두 가져오려면 querySelectorAll 사용
-const itemsAll = document.querySelectorAll(".item");
 
 const app = document.getElementById("app");
 

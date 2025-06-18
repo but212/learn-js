@@ -1,4 +1,4 @@
-const ten = () => 10;
+// const ten = () => 10;
 
 const logger = (logMsg) => "로그메시지: " + logMsg;
 

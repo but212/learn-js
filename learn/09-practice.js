@@ -90,16 +90,16 @@ function congratuationForBirthday(name) {
 
 console.log(congratuationForBirthday("석정일"));
 
-const DAYS_OF_YEAR = 365;
+// const DAYS_OF_YEAR = 365;
 
-/**
- * 신년까지 남은 날짜 계산하는 함수
- * @param {Number} currentDaySpend 신년에서 지난 날짜
- * @returns {Number} 신년까지 남은 날짜
- */
-function calcToNewYearsDay(currentDaySpend) {
-  return DAYS_OF_YEAR - currentDaySpend;
-}
+// /**
+//  * 신년까지 남은 날짜 계산하는 함수
+//  * @param {Number} currentDaySpend 신년에서 지난 날짜
+//  * @returns {Number} 신년까지 남은 날짜
+//  */
+// function calcToNewYearsDay(currentDaySpend) {
+//   return DAYS_OF_YEAR - currentDaySpend;
+// }
 
 const VAT_RATIO = 0.1;
 
