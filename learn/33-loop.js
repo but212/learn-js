@@ -57,21 +57,85 @@
 //   } while (condition);
 // }
 
-// 1~10 숫자입력을 do-while 문으로 변경한 예시
-let userInput;
+// // 1~10 숫자입력을 do-while 문으로 변경한 예시
+// let userInput;
 
-do {
-  userInput = prompt("1부터 10까지 숫자를 입력하세요.");
-  userInput = Number.parseInt(userInput, 10);
+// do {
+//   userInput = prompt("1부터 10까지 숫자를 입력하세요.");
+//   userInput = Number.parseInt(userInput, 10);
 
-  if (Number.isNaN(userInput) || userInput < 1 || userInput > 10) {
-    console.error("1 ~ 10까지의 숫자여야 합니다.");
+//   if (Number.isNaN(userInput) || userInput < 1 || userInput > 10) {
+//     console.error("1 ~ 10까지의 숫자여야 합니다.");
+//   }
+// } while (Number.isNaN(userInput) || userInput < 1 || userInput > 10);
+
+// console.log(userInput, typeof userInput);
+
+// // for 문
+// for (let i = 0; i < 10; ++i) {
+//   console.log(i);
+// }
+
+// {
+//   const numbers = [11, 22, 33, 44, 55, 66];
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] >= 33) {
+//       break;
+//     }
+
+//     console.log(numbers[i]);
+//   }
+// }
+
+// {
+//   const fruitBasket = ["체리망고", "토마토", "스트로베리"];
+//   for (let i = 0; i < fruitBasket.length; i++) {
+//     console.log(fruitBasket[i]);
+//   }
+
+//   const students = [
+//     { 이름: "홍민영" },
+//     { 이름: "윤정화" },
+//     { 이름: "허시온" },
+//     { 이름: "조선현" },
+//     { 이름: "성정현" },
+//     { 이름: "조장원" },
+//   ];
+//   // // 정순
+//   // console.time("정순환");
+//   // for (let i = 0; i < students.length; i++) {
+//   //   console.log(students[i]);
+//   // }
+//   // console.timeEnd("정순환");
+//   // // 역순 - 더 빠름
+//   // console.time("역순환");
+//   // for (let i = students.length - 1; i >= 0; i--) {
+//   //   console.log(students[i]);
+//   // }
+//   // console.timeEnd("역순환");
+
+//   // for of 문
+//   for (const student of students) {
+//     if (student === "김동규") {
+//       continue;
+//     }
+//     console.log(student);
+//   }
+// }
+
+{
+  const webTech = {
+    html: "hyper text markup language",
+    css: "cascading style sheet",
+    js: "javascript",
+  };
+
+  for (const key in webTech) {
+    const value = webTech[key];
+    console.table({
+      key: key,
+      value: value,
+    });
   }
-} while (Number.isNaN(userInput) || userInput < 1 || userInput > 10);
-
-console.log(userInput, typeof userInput);
-
-// for 문
-for (let i = 0; i < 10; ++i) {
-  console.log(i);
 }
