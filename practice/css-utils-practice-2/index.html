@@ -49,18 +49,15 @@
     </div>
     <script src="../../learn/utils/css-utils.js"></script>
     <script>
-      const textElement = document.querySelector('.text');
-      const textColorInput = document.querySelector('#textColor');
-      const backgroundColorInput = document.querySelector('#backgroundColor');
+      const textElement = document.querySelector(".text");
+      const textColorInput = document.getElementById("textColor");
+      const backgroundColorInput = document.getElementById("backgroundColor");
 
-      textColorInput.addEventListener('input', (event) => {
-        const newColor = event.target.value;
-        css(textElement, 'color', newColor);
+      textColorInput.addEventListener("input", () => {
+        css(textElement, "color", textColorInput.value);
       });
-
-      backgroundColorInput.addEventListener('input', (event) => {
-        const newColor = event.target.value;
-        css(textElement, 'background-color', newColor);
+      backgroundColorInput.addEventListener("input", () => {
+        css(textElement, "background-color", backgroundColorInput.value);
       });
     </script>
   </body>

@@ -13,7 +13,8 @@ function getPseudoStyle(element, propertyName, pseudoKeyword) {
 }
 
 function setStyle(element, propertyName, propertyValue) {
-  return element.style.setProperty(propertyName, propertyValue);
+  element.style.setProperty(propertyName, propertyValue);
+  return element;
 }
 
 function css(element, propertyName, propertyValue) {
