@@ -6,32 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="icon" href="./assets/images/ecmascript-logo.png" />
-    <style>
-      :root {
-        --font-size: 48px;
-      }
-
-      body {
-        background-color: maroon;
-      }
-
-      h1 {
-        position: relative;
-        font-size: var(--font-size);
-        color: tan;
-        &::after {
-          content: " ❤️";
-          position: absolute;
-          top: -10px;
-          right: -60px;
-        }
-      }
-    </style>
+    <script src="./learn/utils/query-utils.js"></script>
+    <script src="./learn/utils/attr.js"></script>
   </head>
 
-  <!-- <body style="background-color: maroon"> -->
   <body>
-    <!-- <h1 style="color: tan">JavaScript</h1> -->
     <h1>JavaScript</h1>
 
     <div hidden id="star-wars">
@@ -55,6 +34,26 @@
       </p>
     </section>
 
-    <script type="module" src="./learn/utils/css-utils.js"></script>
+    <p
+      id="notice"
+      class="announcement"
+      data-category="event"
+      data-user-id="27"
+      data-role="manager"
+      data-status="active"
+    >
+      모든 태그는 여러 개의 속성을 가질 수 있습니다!
+    </p>
+
+    <form>
+      <div>
+        <!-- HTML attribute -->
+        <input type="checkbox" name="hobby" id="hobby" checked />
+        <label for="hobby">취미</label>
+      </div>
+      <button type="submit">제출</button>
+    </form>
+
+    <script src="./learn/40-using-attr-function.js"></script>
   </body>
 </html>
