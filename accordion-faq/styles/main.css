@@ -1,0 +1,39 @@
+@import "../../styles/main.css";
+.faq-container {
+  padding: 36px;
+}
+
+.faq-item {
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-inline-size: 30rem;
+
+  .faq-content {
+    display: none;
+    transition-duration: 0.5s;
+  }
+
+  .faq-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    transition-duration: 0.5s;
+  }
+}
+
+.faq-item {
+  &.is-open {
+    .faq-content {
+      display: block;
+    }
+    .faq-button {
+      transform: rotate(45deg);
+    }
+  }
+}
