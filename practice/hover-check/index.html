@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>요소 위치 표시</title>
+    <style>
+      .info-box {
+        width: 150px;
+        height: 150px;
+        background-color: #55efc4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 100px;
+      }
+
+      .tooltip {
+        margin-top: 1rem;
+        font-size: 14px;
+        color: #2d3436;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info-box">마우스를 올려보세요</div>
+    <div class="tooltip" id="positionInfo">위치 정보 없음</div>
+
+    <script>
+      // 마우스 포인터를 .info-box 요소에 올리면 요소의 위치 정보가 .tooltip 요소에 표시되도록 설정합니다.
+      const boxElem = document.querySelector(".info-box");
+      const tooltip = document.querySelector("#positionInfo");
+
+      boxElem.addEventListener("mouseenter", () => {
+        const boxRectInfo = boxElem.getBoundingClientRect();
+        tooltip.textContent = "x: " + boxRectInfo.x + "\t";
+        tooltip.textContent += "y: " + boxRectInfo.y + "\t";
+        tooltip.textContent += "top: " + boxRectInfo.top + "\t";
+        tooltip.textContent += "bottom: " + boxRectInfo.bottom + "\t";
+        tooltip.textContent += "left: " + boxRectInfo.left + "\t";
+        tooltip.textContent += "right: " + boxRectInfo.right + "\t";
+        tooltip.textContent += "width: " + boxRectInfo.width + "\t";
+        tooltip.textContent += "height: " + boxRectInfo.height;
+      });
+      boxElem.addEventListener("mouseleave", () => {
+        tooltip.textContent = "위치 정보 없음";
+      });
+    </script>
+  </body>
+</html>
