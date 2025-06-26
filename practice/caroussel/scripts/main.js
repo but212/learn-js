@@ -9,7 +9,6 @@ const carouselSlideCount = carouselSlides.length; // 캐러셀의 갯수
 const carouselSlideWidth =
   getComputedStyle(carousel).getPropertyValue("--width"); // 슬라이드의 너비: 800px
 const CLASS_SELECT = "is-selected";
-// 현재 인덱스 updateCarousel을 통한 초기화에서 0을 기준으로 이동하면서 초기화 된다.
 let carouselCurrentIndex = 0;
 
 function updateCarousel(newIndex) {
@@ -23,12 +22,24 @@ function updateCarousel(newIndex) {
   carouselNextButton.hidden = newIndex >= carouselSlideCount - 1;
 
   carouselIndicators[carouselCurrentIndex].classList.remove(CLASS_SELECT);
+  carouselSlides[carouselCurrentIndex].classList.remove(CLASS_SELECT);
   carouselIndicators[newIndex].classList.add(CLASS_SELECT);
+  carouselSlides[newIndex].classList.add(CLASS_SELECT);
 
   carouselCurrentIndex = newIndex;
+
+  carouselSlides.forEach((slide) => {
+    const link = slide.querySelector("a");
+    if (slide.classList.contains(CLASS_SELECT)) {
+      link.setAttribute("tabindex", "1");
+    } else {
+      link.setAttribute("tabindex", "-1");
+    }
+  });
 }
 
 function init(index) {
+  updateCarousel(index);
   carouselPrevButton.addEventListener("click", () => {
     updateCarousel(carouselCurrentIndex - 1);
   });
@@ -42,6 +53,4 @@ function init(index) {
       updateCarousel(index);
     });
   });
-
-  updateCarousel(index);
 }
