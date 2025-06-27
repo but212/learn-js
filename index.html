@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>JavaScript 펀더멘탈</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <link rel="icon" href="./assets/images/ecmascript-logo.png" />
     <script src="./learn/utils/query-utils.js"></script>
     <script src="./learn/utils/attr.js"></script>
@@ -97,7 +97,7 @@
       배경색 변경
     </button>
 
-    <a href="https://naver.com" target="_blank" rel="noopener noreferrer">
+    <!-- <a href="https://naver.com" target="_blank" rel="noopener noreferrer">
       네이버
     </a>
 
@@ -106,18 +106,18 @@
     <label for="agreement">
       <input type="checkbox" name="agreement" id="agreement" />
       동의합니다.
-    </label>
+    </label> -->
 
     <hr />
 
-    <form data-learn="form" method="GET" action="https://google.com">
+    <form hidden data-learn="form" method="GET" action="https://google.com">
       <!-- 검색 필드 -->
       <div>
-        <label for="searchTerm">검색어</label>
+        <label for="search-term">검색어</label>
         <input
           type="search"
-          name="searchTerm"
-          id="searchTerm"
+          name="search-term"
+          id="search-term"
           placeholder="검색어를 입력"
         />
       </div>
@@ -127,6 +127,54 @@
       </div>
     </form>
 
-    <script src="./learn/45-block-default-behavior.js"></script>
+    <div hidden class="box box1">
+      <span>박스 1</span>
+      <div class="box box2">
+        <span>박스 2</span>
+        <div class="box box3">
+          <span>박스 3</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- <ul hidden class="link-list">
+      <li><a href="/news">📢 최신 뉴스 보기</a></li>
+      <li><a href="/tutorials">📘 튜토리얼 모음</a></li>
+      <li><a href="/community">💬 커뮤니티 참여</a></li>
+      <li><a href="/resources">📁 개발 자료실</a></li>
+      <li><a href="/contact">📮 문의하기</a></li>
+    </ul> -->
+
+    <ul class="link-list">
+      <li>
+        <a href="/news">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M15 18h-5" />
+            <path d="M18 14h-8" />
+            <path
+              d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+            />
+            <rect width="8" height="4" x="10" y="6" rx="1" />
+          </svg>
+          최신 뉴스 보기
+        </a>
+      </li>
+      <li><a href="/tutorials">📘 튜토리얼 모음</a></li>
+      <li><a href="/community">💬 커뮤니티 참여</a></li>
+      <li><a href="/resources">📁 개발 자료실</a></li>
+      <li><a href="/contact">📮 문의하기</a></li>
+    </ul>
+
+    <script src="./learn/47-event-delegation.js"></script>
   </body>
 </html>

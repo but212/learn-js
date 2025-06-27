@@ -48,7 +48,7 @@
     console.log(e.currentTarget);
     const formElement = e.currentTarget;
     console.log(formElement);
-    console.log(formElement.elements.searchTerm.value);
+    console.log(formElement.elements["search-term"].value);
   });
 
   form.addEventListener("reset", (e) => {
@@ -57,6 +57,6 @@
     }
     console.log(e.currentTarget);
     const formElement = e.currentTarget;
-    formElement.elements.searchTerm.value = "";
+    formElement.elements["search-term"].value = "";
   });
 }
