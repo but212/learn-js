@@ -81,10 +81,52 @@
       </div>
       <button type="submit">제출</button>
     </form>
-    <form>
+    <form hidden>
       <button type="button" data-name="change-bg-color">배경색 변경</button>
     </form>
+    <form hidden>
+      <div>
+        <!-- HTML attribute -->
+        <input type="checkbox" name="hobby" id="hobby" checked />
+        <label for="hobby">취미</label>
+      </div>
+      <button type="submit">제출</button>
+    </form>
 
-    <script src="./learn/44-event-listning-obj.js"></script>
+    <button hidden type="button" data-name="change-bg-color">
+      배경색 변경
+    </button>
+
+    <a href="https://naver.com" target="_blank" rel="noopener noreferrer">
+      네이버
+    </a>
+
+    <hr />
+
+    <label for="agreement">
+      <input type="checkbox" name="agreement" id="agreement" />
+      동의합니다.
+    </label>
+
+    <hr />
+
+    <form data-learn="form" method="GET" action="https://google.com">
+      <!-- 검색 필드 -->
+      <div>
+        <label for="searchTerm">검색어</label>
+        <input
+          type="search"
+          name="searchTerm"
+          id="searchTerm"
+          placeholder="검색어를 입력"
+        />
+      </div>
+      <div style="margin-block-start: 8px">
+        <button type="submit">검색</button>
+        <button type="reset">초기화</button>
+      </div>
+    </form>
+
+    <script src="./learn/45-block-default-behavior.js"></script>
   </body>
 </html>
