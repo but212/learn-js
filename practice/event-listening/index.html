@@ -50,12 +50,12 @@
         let count = 0;
         function handleLogClick() {
           count += 1;
-          output.textContent = "버튼은" + count + "번 클릭되었습니다.";
+          output.value = "버튼은" + count + "번 클릭되었습니다.";
         }
         function handleLimitedClick(e) {
           if (count >= 3) {
             e.currentTarget.removeEventListener("click", handleLimitedClick);
-            output.textContent = "이벤트가 제거되었습니다.";
+            output.value = "이벤트가 제거되었습니다.";
             return;
           }
           handleLogClick();
@@ -68,7 +68,7 @@
         //    output에 '이벤트가 제거되었습니다.' 출력
         removeButton.addEventListener("click", () => {
           logButton.removeEventListener("click", handleLogClick);
-          output.textContent = "이벤트가 제거되었습니다.";
+          output.value = "이벤트가 제거되었습니다.";
         });
         // 3. '3번만 클릭 가능' 버튼은 클릭할 때마다 횟수를 세고,
         //    세 번째 클릭 후 자동으로 리스너 제거
@@ -77,6 +77,7 @@
         //    다시 처럼으로 돌아가 코드가 실행되도록 구현
         resetButton.addEventListener("click", () => {
           count = 0;
+          output.value = "클릭 횟수 출력";
           logButton.addEventListener("click", handleLogClick);
           limitedButton.addEventListener("click", handleLimitedClick);
         });
