@@ -117,13 +117,12 @@
   function animate() {
     // const tween = gsap.to(".box:first-of-type", {});
     // console.log(tween);
-
     const timeline = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
     timeline
       .from(".blue", {
         y: 200,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.4,
         ease: "back.out",
       })
       .from(
@@ -131,7 +130,7 @@
         {
           y: 200,
           opacity: 0,
-          duration: 0.6,
+          duration: 0.4,
           ease: "back.out",
         },
         "<"
@@ -139,7 +138,7 @@
       .from(".pink", {
         y: -200,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.4,
         ease: "back.out",
       })
       .from(
@@ -147,7 +146,7 @@
         {
           y: -200,
           opacity: 0,
-          duration: 0.6,
+          duration: 0.4,
           ease: "back.out",
         },
         "<"
@@ -157,7 +156,7 @@
         {
           y: 200,
           opacity: 0,
-          duration: 0.6,
+          duration: 0.4,
           ease: "back.out",
         },
         "-=0.3"
