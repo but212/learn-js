@@ -43,3 +43,32 @@ h1 {
     background-color: #e1005a;
   }
 }
+
+.ball {
+  --size: 40px;
+  --fill: #121212;
+  --fill-hover: #205090;
+  --radius: 100%;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  background-color: var(--fill);
+  border-radius: var(--radius);
+  transition-property: background-color, block-size, inline-size;
+  transition-duration: 0.6s, 0.4s, 0.4s;
+  transition-timing-function: linear, ease-out, ease-out;
+
+  /* CSS 트랜지션 트리거 */
+  /* &:hover {
+    
+  }
+  &:active {
+    
+  } */
+
+  /* JS 트렌지션 트리거 */
+  &.is-transition {
+    background-color: var(--fill-hover);
+    scale: var(--size);
+  }
+}
