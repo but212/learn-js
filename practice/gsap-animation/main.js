@@ -1,4 +1,4 @@
-/* global gsap */
+/* global gsap GSDevTools */
 
 // {
 //   // Web Animations API
@@ -162,5 +162,120 @@
         "-=0.3"
       );
   }
-  setTimeout(animate, 500);
+}
+
+// // gsap callbacks and controlls
+// {
+//   function animate() {
+//     const tl = gsap
+//       .timeline({
+//         repeat: 1,
+//         repeatDelay: 1,
+//         // yoyo: true,
+//         defaults: { opacity: 0, duration: 1, ease: "back.inOut(4)" },
+//         // 타임라인 콜백 설정
+//         onStart: () => {
+//           console.log("start");
+//         },
+//         onUpdate: () => {
+//           console.log("updating...");
+//         },
+//         onRepeat: () => {
+//           console.log("repeat");
+//         },
+//         onComplete: () => {
+//           console.log("completed");
+//         },
+//         onReverseComplete: () => {
+//           console.log("reverse completed");
+//           document.querySelector('[data-control="timeScale-0.5"]').click();
+//           console.log("0.5배속 재생 시작!");
+//         },
+//       })
+//       .from(".blue", { y: 200 }) // 0s
+//       .from(".purple", { y: 200 }, "<")
+//       .from(".yellow", { y: -200 }, "-=0.3")
+//       .from(".pink", { y: -200 }, "<")
+//       .from(".green", { y: 200 }, 0 + 0.3);
+//     // 타임라인 인스턴스 제어
+//     // pause()
+//     tl.pause();
+//     // 이벤트 위임
+//     // 타임라인 컨트롤 (재생, 일시정지, 재개, 역재생, 재시작, 2배속, 0.5배속)
+//     document.querySelector("header").addEventListener("click", (e) => {
+//       const button = e.target.closest("button");
+//       if (button.matches('[data-control="play"]')) {
+//         tl.play();
+//       }
+//       if (button.matches('[data-control="pause"]')) {
+//         tl.pause();
+//       }
+//       if (button.matches('[data-control="resume"]')) {
+//         tl.resume();
+//       }
+//       if (button.matches('[data-control="reverse"]')) {
+//         tl.reverse();
+//       }
+//       if (button.matches('[data-control="restart"]')) {
+//         tl.restart();
+//       }
+//       if (button.matches('[data-control="timeScale-2"]')) {
+//         tl.timeScale(2).play();
+//       }
+//       if (button.matches('[data-control="timeScale-0.5"]')) {
+//         tl.timeScale(0.5).play();
+//       }
+//     });
+//   }
+//   function tweenAnimate() {
+//     const greenTween = gsap.to(".green", {
+//       scale: 1.3,
+//       rotation: 270,
+//       skewX: 30,
+//       duration: 1.5,
+//       ease: "back.inOut(2)",
+//       repeat: 1,
+//       yoyo: true,
+//       repeatDelay: 1,
+//       onStart: () => {
+//         console.log("start tween");
+//       },
+//       onRepeat: () => {
+//         console.log("2배속");
+//         greenTween.timeScale(2).play();
+//       },
+//       onComplete: () => {
+//         console.log("complete tween");
+//       },
+//     });
+//     greenTween.pause();
+//     document.querySelector(".purple").addEventListener("click", () => {
+//       greenTween.timeScale(0.4).play();
+//     });
+//   }
+//   setTimeout(() => {
+//     animate();
+//     // tweenAnimate()
+//   }, 200);
+// }
+
+// gsap - animation debug with GSDevTools
+{
+  // 플러그인 등록
+  gsap.registerPlugin(GSDevTools);
+
+  const timeline = gsap.timeline({
+    repeat: 1,
+    yoyo: true,
+    defaults: { x: -200, duration: 0.4, opacity: 0, rotation: 270 },
+  });
+
+  timeline
+    .from(".blue")
+    .from(".yellow")
+    .from(".green")
+    .from(".pink")
+    .from(".purple");
+
+  GSDevTools.create({ animation: timeline });
 }
