@@ -1,4 +1,5 @@
-@layer theme, demo;
+@layer theme, demo, common;
 
 @import "./modules/_theme.css" layer(theme);
 @import "./modules/_demo.css" layer(demo);
+@import "./common/_index.css" layer(common);

@@ -5,7 +5,8 @@
 
 @import "/assets/styles/common/_theme.css" layer(theme);
 @import "./_theme.css" layer(theme);
-@import "/styles/common/_animation.css";
-@import "./components/_accordion.css" layer(components);
 
+@import "./components/_button.css" layer(components);
+@import "./components/_modal-dialog.css" layer(components);
+@import "/styles/common/_animation.css" layer(animation);
 @import "./_demo.css";

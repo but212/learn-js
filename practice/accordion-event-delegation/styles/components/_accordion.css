@@ -18,8 +18,8 @@
     .accordion__indicator {
       rotate: -45deg;
     }
-	}
-  
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -27,20 +27,20 @@
     inline-size: var(--belt-width);
     background-color: var(--belt-color);
   }
-  
+
   &:first-child {
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
-    
+
     &::before {
       border-top-left-radius: var(--radius);
     }
   }
-  
+
   &:last-child {
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
-    
+
     &::before {
       border-bottom-left-radius: var(--radius);
     }
@@ -61,19 +61,40 @@
         font-weight: 500;
       }
 
-      .accordion__indicator > svg {
+      .accordion__indicator {
         inline-size: 0.875rem;
+        transition: rotate 0.3s var(--ease-out-sine);
+
+        .is-open & {
+          rotate: -45deg;
+        }
       }
     }
   }
 
   .accordion__content {
-    display: none;
-    grid-template-columns: 7.5rem 1fr;
-    grid-column-gap: 1.5rem;
-    align-items: center;
+    overflow: hidden;
+    block-size: 0;
     padding-inline: 2rem;
-    padding-block-end: 1.5rem;
+    transition: block-size 0.3s var(--ease-out-expo);
+
+    .accordion__inner {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      grid-column-gap: 1.5rem;
+      align-items: center;
+      padding-block-end: 1.5rem;
+    }
+
+    transition: block-size 0.3s var(--ease-out-expo);
+
+    @starting-style {
+      block-size: 0;
+    }
+
+    .is-open & {
+      block-size: auto;
+    }
 
     p {
       font-size: 1rem;
@@ -81,5 +102,3 @@
     }
   }
 }
-
-
