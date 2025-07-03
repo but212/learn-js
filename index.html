@@ -9,33 +9,60 @@
     <script src="./learn/utils/query-utils.js"></script>
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <script src="./learn/utils/query-utils.js"></script>
-    <script defer src="./learn/54-destructuring-assignment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap/dist/gsap.min.js"></script>
+    <script defer src="./learn/57-rest-parameter.js"></script>
   </head>
 
   <body>
-    <h1>JavaScript</h1>
+    <h1 id="static">
+      <a
+        href="https://developer.mozilla.org/ko/docs/Web/JavaScript"
+        target="_blank"
+        rel="noopener noreferrer"
+        lang="en"
+      >
+        JavaScript
+      </a>
+    </h1>
 
-    <div class="practice">
-      <form>
-        <div>
-          <label for="username">이름</label>
-          <input id="username" type="text" placeholder="이름을 입력하세요." />
-        </div>
-        <div>
-          <label for="meal">식사</label>
-          <select id="meal">
-            <option>식사 종류</option>
-            <option value="breakfast">아침</option>
-            <option value="lunch">점심</option>
-            <option value="dinner">저녁</option>
-          </select>
-        </div>
-        <button type="button">인사하기</button>
-      </form>
-      <p>인사말 출력</p>
+    <header data-index="1">
+      <button type="button">button in header 1</button>
+    </header>
+
+    <header data-index="2">
+      <button type="button">button in header 2</button>
+    </header>
+
+    <div
+      id="contoller"
+      role="group"
+      style="display: flex; gap: 4px; margin-block: 12px"
+    >
+      <button type="button" data-role="add-event">이벤트 추가</button>
+      <button type="button" data-role="remove-event">이벤트 제거</button>
+      <button type="button" data-role="tester">이벤트 추가 대기중...</button>
+      <button type="button" data-role="once-event">1회만 이벤트 설정</button>
     </div>
-
-    <main hidden>
+    <div id="archive" hidden>
+      <div class="practice">
+        <form>
+          <div>
+            <label for="username">이름</label>
+            <input id="username" type="text" placeholder="이름을 입력하세요." />
+          </div>
+          <div>
+            <label for="meal">식사</label>
+            <select id="meal">
+              <option>식사 종류</option>
+              <option value="breakfast">아침</option>
+              <option value="lunch">점심</option>
+              <option value="dinner">저녁</option>
+            </select>
+          </div>
+          <button type="button">인사하기</button>
+        </form>
+        <p>인사말 출력</p>
+      </div>
       <div hidden class="practice1">
         <form>
           <div>
@@ -98,6 +125,6 @@
         <li><a href="/resources">📁 개발 자료실</a></li>
         <li><a href="/contact">📮 문의하기</a></li>
       </ul>
-    </main>
+    </div>
   </body>
 </html>

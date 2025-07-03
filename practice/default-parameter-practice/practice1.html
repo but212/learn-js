@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>기본 파라미터 실습 - 세금</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="practice1">
+      <div>
+        <label for="income">소득</label>
+        <input type="number" id="income" value="10_000" />
+      </div>
+      <div>
+        <label for="taxRate">세율</label>
+        <input
+          type="number"
+          id="taxRate"
+          value="0.033"
+          step="0.001"
+          min="0"
+          max="1"
+        />
+      </div>
+      <output>
+        소득 금액 <span class="income"></span>원에 부가된 세율은
+        <span class="tax-rate"></span>%로 소득 금액에 따른 세금은
+        <b class="tax"></b>원입니다.
+      </output>
+    </div>
+    <script>
+      const DEFAULT_TAX_RATE = 0.033;
+      const practice = document.getElementById("practice1");
+      const output = practice.querySelector("output");
+      const spanIncome = output.querySelector(".income");
+      const spanTaxRate = output.querySelector(".tax-rate");
+      const spanTax = output.querySelector(".tax");
+
+      practice.addEventListener("input", ({ target: numberInput }) => {
+        const income = practice.querySelector("#income").value;
+        const taxRate = practice.querySelector("#taxRate").value;
+        const taxPay = calcTaxRate(income, taxRate);
+
+        spanIncome.textContent = income;
+        spanTax.textContent = taxPay;
+        spanTaxRate.textContent = taxRate;
+      });
+
+      function calcTaxRate(income, taxRate = DEFAULT_TAX_RATE) {
+        return income * taxRate;
+      }
+    </script>
+  </body>
+</html>
