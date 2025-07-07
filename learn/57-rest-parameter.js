@@ -79,66 +79,61 @@
 //   console.log(restScores); // [92, 76]
 // }
 
-// 객체 전개
-{
-  const fruitBlender = {
-    blendKiwi: true,
-    blendMango: true,
-  };
-  const megaBlender = {
-    blendGuava: true,
-    ...fruitBlender, // 나머지 블렌더 변수 취합
-  };
-  console.log(megaBlender);
-  // {
-  //   blendGuava: true,
-  //   blendKiwi: true,
-  //   blendMango: true,
-  // }
-}
+// // 객체 전개
+// {
+//   const fruitBlender = {
+//     blendKiwi: true,
+//     blendMango: true,
+//   };
+//   const megaBlender = {
+//     blendGuava: true,
+//     ...fruitBlender, // 나머지 블렌더 변수 취합
+//   };
+//   console.log(megaBlender);
+//   // {
+//   //   blendGuava: true,
+//   //   blendKiwi: true,
+//   //   blendMango: true,
+//   // }
+// }
 
-// 객체 나머지 취합
-{
-  const fruitBlender = {
-    blendKiwi: true,
-    blendMango: true,
-    blendOrange: true,
-    blendPapaya: true,
-  };
-  const { blendKiwi, ...otherProps } = fruitBlender;
-  console.log(blendKiwi);
-  console.log(otherProps);
-  // {
-  //   blendMango: true,
-  //   blendOrange: true,
-  //   blendPapaya: true
-  // }
-}
+// // 객체 나머지 취합
+// {
+//   const fruitBlender = {
+//     blendKiwi: true,
+//     blendMango: true,
+//     blendOrange: true,
+//     blendPapaya: true,
+//   };
+//   const { blendKiwi, ...otherProps } = fruitBlender;
+//   console.log(blendKiwi);
+//   console.log(otherProps);
+//   // {
+//   //   blendMango: true,
+//   //   blendOrange: true,
+//   //   blendPapaya: true
+//   // }
+// }
 
-// 객체 합성
-{
-  /* global gsap */
-
-  const initVars = { opacity: 0, rotateX: -480 };
-
-  // gsap.timeline({ defaults: { ... } })
-
-  const commonVars = { opacity: 1, rotateX: 0 };
-  // const h1Vars = { scale: 1, delay: 0.5 }
-  // const pVars = { y: -50, color: '#551b8b', scale: 1.2, delay: 0.8 }
-
-  // // console.log(Object.assign({}, commonVars, h1Vars))
-  // console.log({ ...commonVars, ...h1Vars })
-  // console.log(commonVars)
-  // console.log(h1Vars)
-
-  gsap.set("h1, p", initVars);
-  gsap.to("h1", { ...commonVars, scale: 1, delay: 0.5 });
-  gsap.to("p", {
-    ...commonVars,
-    y: -50,
-    color: "#551b8b",
-    scale: 1.2,
-    delay: 0.8,
-  });
-}
+// // 객체 합성
+// {
+//   /* global gsap */
+//   const initVars = { opacity: 0, rotateX: -480 };
+//   // gsap.timeline({ defaults: { ... } })
+//   const commonVars = { opacity: 1, rotateX: 0 };
+//   // const h1Vars = { scale: 1, delay: 0.5 }
+//   // const pVars = { y: -50, color: '#551b8b', scale: 1.2, delay: 0.8 }
+//   // // console.log(Object.assign({}, commonVars, h1Vars))
+//   // console.log({ ...commonVars, ...h1Vars })
+//   // console.log(commonVars)
+//   // console.log(h1Vars)
+//   gsap.set("h1, p", initVars);
+//   gsap.to("h1", { ...commonVars, scale: 1, delay: 0.5 });
+//   gsap.to("p", {
+//     ...commonVars,
+//     y: -50,
+//     color: "#551b8b",
+//     scale: 1.2,
+//     delay: 0.8,
+//   });
+// }
