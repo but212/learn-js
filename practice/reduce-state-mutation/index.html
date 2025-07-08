@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <title>웹 애플리케이션 상태 관리</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      .counter-box {
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+      }
+      .count {
+        font-size: 2em;
+        margin: 10px 0;
+        color: #2b80ff;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="counter">
+      <h2>클릭 횟수</h2>
+      <button type="button">클릭 횟수 변경</button>
+      <output>0</output>
+    </section>
+
+    <script>
+      {
+        const counter = document.querySelector(".counter");
+        const button = counter.querySelector("button");
+        const output = counter.querySelector("output");
+
+        button.addEventListener("click", () => {
+          output.textContent = updateCounterState(output);
+        });
+
+        function updateCounterState(element, countDirection = 1) {
+          return Number.parseInt(element.textContent) + countDirection;
+        }
+      }
+    </script>
+  </body>
+</html>
