@@ -42,8 +42,8 @@
           output.textContent = updateCounterState(output);
         });
 
-        function updateCounterState(element, countDirection = 1) {
-          return Number.parseInt(element.textContent) + countDirection;
+        function updateCounterState({ textContent }, countDirection = 1) {
+          return Number.parseInt(textContent) + countDirection;
         }
       }
     </script>
